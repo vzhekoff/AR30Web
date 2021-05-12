@@ -1,0 +1,26 @@
+﻿@model AR30Web.Data.Issuer
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Issuer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.PartialAsync("_EditButtonPartial", Model.Id)
+    @Html.PartialAsync("_BackToListButtonPartial")
+</p>
